@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+    http://www.springframework.org/schema/task
+    http://www.springframework.org/schema/task/spring-task-3.2.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- spring1.x版本使用xml方式定义一个bean -->
+    <bean name="helloService" class="com.gupaoedu.course.spring1x.TestService"/>
+
+    <!-- spring2.x版本开始支持组件扫描 -->
+    <context:component-scan base-package="com.gupaoedu.course.spring2x"/>
+
+    <!-- spring3.x版本来时支持@Enable特性，以下配置可以使用@EnableScheduling替代 -->
+<!--    <task:annotation-driven scheduler="scheduler"/>-->
+<!--    <task:scheduler id="scheduler" pool-size="5"/>-->
+<!--    <context:component-scan base-package="com.gupaoedu.course.spring3x.enable"/>-->
+
+
+</beans>
